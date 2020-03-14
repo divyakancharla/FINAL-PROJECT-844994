@@ -1,0 +1,38 @@
+.note
+{
+    text-align: center;
+    height: 80px;
+    font-size:35px;
+    background: -webkit-linear-gradient(left, #000000, #FFFFFF);
+    color: #fff;
+    font-weight: bold;
+    line-height: 80px;
+   
+}
+.form-content
+{
+    padding: 5%;
+    /* background-color: white; */
+    /* background-color: rgb(236, 233, 233,1.5); */
+    background: rgba(255, 255, 255, 0.5);
+    /* background-image: url(/assets/images/emart.jpg); */
+    border: 1px solid #ced4da;
+    margin-bottom: 2%;
+    /* transform: translate(-50%,-50%);
+    background-color:rgba(0,0,0,0.5); */
+}
+.form-control{
+    border-radius:1.5rem;
+  
+}
+.btnSubmit
+{
+    border:none;
+    border-radius:1.5rem;
+    padding: 1%;
+    width: 20%;
+    margin-left: 20px;
+    cursor: pointer;
+    background: #000000;
+    color: #fff;
+}

@@ -1,0 +1,38 @@
+
+<div style="max-width: 100%;overflow-x: hidden;overflow-y:hidden;">
+    <div style="height:900px;background-repeat:no-repeat;background-size: 100% 100%;">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#"><i class="fa fa-fu fa-home"></i>E-mart</a>
+                </div>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item" id="home">
+                            <a style="margin-left: 90px;" [routerLink]="'Landing'" routerLinkActive="router-link-active"  class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        
+                     
+                  <li class="nav-item" id="login">
+                    <a class="nav-link text-light" [routerLink]="'login'" routerLinkActive="router-link-active"  routerLinkActive="router-link-active"   asp-area="" asp-controller="Home">Login</a>
+                </li>
+               
+              </ul>
+             
+                </div>
+               
+                
+                
+                
+            </div>
+          </nav>
+          
+        
+          <router-outlet></router-outlet>
+          
+  
+    </div>
+    
+
+    
+  

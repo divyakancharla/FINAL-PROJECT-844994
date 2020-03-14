@@ -1,0 +1,31 @@
+
+<form>
+  <div class="container">
+    <div class="row">
+    <br>
+           
+            <div class="col-sm-6">
+              <div class="panel panel-primary">
+                <div style="width: 550px;" class="panel-heading"></div>
+                <table class="table table-bordered">
+                  <thead style="background-color: white;">
+                    <tr>
+                      <th>SubCategory Name</th>
+                      <th>SubCategory Details</th>
+                      <th>Action</th>
+                      
+                    </tr>
+                  </thead>
+                 <tbody style="background: rgb(233,233,233,0.5);">
+                     <tr *ngFor="let item of subcategories">
+                         
+                         <td>{{item.subname}}</td>
+                         <td>{{item.subdet}}</td>
+                         <td><button class="btn btn-dark" data-toggle="modal"  data-target="#exampleModalCenter">Edit</button><button class="btn" data-toggle="modal"  >Delete</button><br></td>
+                     </tr>
+                 </tbody>
+                </table>
+              </div>
+           
+            </div>
+       </div></div>  </form> 

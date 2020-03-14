@@ -1,0 +1,41 @@
+<div style="background-image: url('/assets/food2.jpg');">
+<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#"><i class="fa fa-fu fa-home"></i>E-mart</a>
+        </div>
+        <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+            <ul class="navbar-nav flex-grow-1">
+                <li class="nav-item" id="home">
+                    <a style="margin-left: 90px;" class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" [routerLink]="'/Admin/AddCategory'" routerLinkActive="router-link-active"  routerLinkActive="router-link-active"  asp-area="" asp-controller="Home">AddCategories</a>
+                </li>
+            
+            <li class="nav-item">
+              <a class="nav-link text-light" [routerLink]="'/Admin/AddSubCategory'" routerLinkActive="router-link-active"  asp-area="" asp-controller="Home" >AddSubCategories</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" [routerLink]="'/Admin/viewcategory'" routerLinkActive="router-link-active"  asp-area="" asp-controller="Home">ViewCategories</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-light" [routerLink]="'/Admin/viewsubcategory'" routerLinkActive="router-link-active"  asp-area="" asp-controller="Home">ViewSubCategories</a>
+        </li>
+       
+        <li class="nav-item form-inline my-2 my-lg-0" id="logout">
+            <button (click)="reset()" routerLinkActive="router-link-active"  style="border-color:white;color: white;" class="btn btn-outline-default my-2 my-sm-0" type="submit">Logout</button>
+
+        </li>
+      </ul>
+     
+        </div>
+        
+        
+  
+    </div>
+  </nav></div>
+  <router-outlet></router-outlet>
+  
+
+

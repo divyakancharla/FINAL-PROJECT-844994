@@ -1,0 +1,70 @@
+<div class="container">
+<form [formGroup]="itemForm" (ngSubmit)="onsubmit()">
+<div class="container register-form" id="form" style="float: right;margin-top:90px;margin-right:130px">
+    <div class="form">
+        <div class="note">
+            <p>Register Here</p>
+        </div>
+       
+        <div class="form-content"  style="border-color: white;">
+            <div class="row">
+                
+                    <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="text" formControlName="username" class="form-control" placeholder="Your Name *" value=""  [ngClass]="{ 'is-invalid': submitted && f.username.errors }"/>
+                        <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                            <div *ngIf="f.username.errors.required">First Name is required</div>
+                            <div *ngIf="f.username.errors.pattern">Username Should be of length 5</div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="email" formControlName="email" class="form-control" placeholder="Your Email *" value="" [ngClass]="{ 'is-invalid': submitted && f.email.errors }"/>
+                        <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                            <div *ngIf="f.email.errors.required">email is required</div>
+                            <div *ngIf="f.email.errors.pattern">Enter valid id ex:B445</div>
+                        </div>
+                    </div></div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="datetime-local" formControlName="createdatetime" class="form-control" placeholder="Your Joining Date *" value="" [ngClass]="{ 'is-invalid': submitted && f.createdatetime.errors }"/>
+                        <div *ngIf="submitted && f.createdatetime.errors" class="invalid-feedback">
+                            <div *ngIf="f.createdatetime.errors.required">Date is required</div>
+                            <div *ngIf="f.createdatetime.errors.pattern"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="text" formControlName="mobilenumber" class="form-control" placeholder="Your Mobile Number*" value=""  [ngClass]="{ 'is-invalid': submitted && f.mobilenumber.errors }"/>
+                        <div *ngIf="submitted && f.mobilenumber.errors" class="invalid-feedback">
+                            <div *ngIf="f.mobilenumber.errors.required">number is required</div>
+                            <div *ngIf="f.mobilenumber.errors.pattern">Must start with 6 or 9 or 8</div>
+                        </div>
+                    </div>
+                    
+                </div>
+                    <div class="col-md-12">
+                    <div class="form-group">
+                        <input type="password" formControlName="password" class="form-control" placeholder="Your password *" value="" [ngClass]="{ 'is-invalid': submitted && f.password.errors }"/>
+                        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                            <div *ngIf="f.password.errors.required">Password is required</div>
+                            <div *ngIf="f.password.errors.pattern">Must contain 4 Alphabets and 3 special characters</div>
+                        </div>
+                    </div>
+                </div>
+             
+               <div  class="col-md-9">
+                <button  type="submit" class="btnSubmit">Submit</button> 
+                <button  type="submit" (click)="resett()" class="btnSubmit">Reset</button> 
+                <button (click)="redirect()" class="btnSubmit">Back to login</button> </div>
+            </div>
+         
+        </div>
+   
+    </div>
+</div>
+</form>
+</div>

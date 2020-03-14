@@ -1,0 +1,68 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6 pb-5">
+
+
+                    <!--Form with header-->
+
+                    <form [formGroup]="adminform">
+                        <div class="card border-dark rounded-0">
+                            <div class="card-header p-0">
+                                <div class="bg-dark text-white text-center py-2">
+                                    <h3><i class="fa fa-plus"></i>Add SubCategories</h3>
+                                </div>
+                            </div>
+                            <div class="card-body p-3">
+
+                                <!--Body-->
+                                <div  class="form-group">
+                                    <div class="input-group mb-2">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text"><i class="fa fa-list-alt"></i></div>
+                                        </div>
+                                       <select  formControlName="categoryid">
+                                           <option *ngFor="let item of categories" value={{item.cid}}>{{item.cname}}</option>
+                                       </select>
+                                        
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-group mb-2">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text"><i class="fa fa-list-alt"></i></div>
+                                        </div>
+                    <input  type="text" formControlName="subcategoryname" class="form-control" placeholder="Your SubCategory name *" value="" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-group mb-2">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text"><i class="fa fa-list-alt"></i></div>
+                                        </div>
+                    <input  type="text" formControlName="gst" class="form-control" placeholder="Add GST *" value="" />
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="input-group mb-2">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text"><i class="fa fa-comment text-dark"></i></div>
+                                        </div>
+                    <textarea  type="text" formControlName="subcategorydet" class="form-control" placeholder="Your SubCategory details *" value=""></textarea>
+
+                                    </div>
+                                </div>
+
+                                <div class="text-center">
+                                    <button (click)="AddC()" type="submit"  class="btn btn-dark btn-block rounded-0 py-2">add</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+                    <!--Form with header-->
+
+
+                </div>
+    </div>
+</div>

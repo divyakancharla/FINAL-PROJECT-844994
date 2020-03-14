@@ -1,0 +1,43 @@
+<form [formGroup]="search">
+<div>
+<li style="margin-left:190px;" class="nav-item form-inline my-2 my-lg-0" id="search">
+
+    <input class="form-control mr-sm-2" formControlName="search" type="search" placeholder="Search" aria-label="Search">
+    <button style="border-color:white;color: white;" (click)="searchh()" class="btn btn-dark my-2 my-sm-0" type="submit">Search</button>
+
+</li>
+
+
+</div>
+</form>
+<section class="sections random-product">
+    <div class="container-fluid">
+        <div class="container">
+            <div  class="row">
+                <div  *ngFor="let i of items" class="col-md-3">
+                  <div style="margin-top: 20px;">
+                    <div class="card">
+                        <img style="height:200px;" class="card-img-top" src='assets/images/{{i.imagename}}' alt="Card image cap">
+                        <div style="height:10px;margin-bottom: 40px;" class="card-body">
+                            <h5  class="card-title">
+                                <a href="#" class="text-dark">{{i.itemname}}</a>
+                            </h5>
+                        </div>
+                        <div style="height: 40px;" >
+                            <div class="badge badge-danger float-right"></div>
+                            <div style="margin-bottom: 50px;width:252px;" class="btn-group" role="group">
+                              <button (click)="Buy(i)" style="border-color: white;background: rgb(0,0,0,0.5);" class="btn btn-dark" data-toggle="modal"data-target="#exampleModalCenter">BUY</button>
+                              <button style="border-color: white;background: rgb(0,0,0,0.5);" class="btn" data-toggle="modal"  (click)="addcart(i)" >ADD</button>
+                                <br>
+                                <small class="text-muted"><del></del></small>
+                            </div>
+                        </div>
+                    </div>
+                  
+                  
+                  </div> 
+                </div><!--.col-->
+            </div><!--.row-->
+        </div><!--.container-->
+    </div><!--.container-fluid-->
+</section>

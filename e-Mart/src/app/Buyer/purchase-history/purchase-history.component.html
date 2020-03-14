@@ -1,0 +1,26 @@
+
+  <div style="margin-left: 430px;margin-top: 50px;height:930px">  
+	<table class="table-bordered"> 
+		<th>Item</th>
+		<th>Itemid</th>
+		<th>itemname</th>
+		<th>Number Of Items</th>             
+		<th>Date Time</th>             
+		<th>Price</th>             
+		<th>Total</th>             
+
+<ng-container *ngFor="let purchase of purch"> 
+	<ng-container *ngFor="let item of items">
+   <tr *ngIf="item.itemid==purchase.itemid">     
+ <td><img  style="height: 90px;width:90px ;" class="card-img-top" src="..\assets\images\{{item.imagename}}"> </td>
+ <td >{{item.itemid}}</td>
+  <td>{{item.itemname}}</td>
+  <td>{{purchase.numberofitems}}</td>
+  <td>{{purchase.datetime}}</td>
+  <td>{{item.price}}</td>
+  <td>{{item.price*purchase.numberofitems}}</td>
+
+	</tr>
+</ng-container>
+</ng-container></table> 
+</div> 

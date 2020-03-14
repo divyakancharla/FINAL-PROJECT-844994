@@ -1,0 +1,32 @@
+ <section class="sections random-product">
+    <div class="container-fluid">
+        <div class="container">
+            <div  class="row">
+                <div  *ngFor="let item of list" class="col-md-3">
+                  <div style="margin-top: 20px;">
+                    <div style="background: rgb(255,255,255,0.5);" class="card">
+                        <img style="height:200px;" class="card-img-top" src='assets/images/{{item.imagename}}' alt="Card image cap">
+                        <div style="height:10px;margin-bottom: 40px;background: rgb(255,255,255,0.5);font-family:Times New Roman, Times, serif" class="card-body">
+                            <h3  class="card-title">
+                                <a style="float: left;" href="#" class="text-dark">{{item.itemname}}</a>
+                                <h3 style="float: right;">{{item.price}}</h3>
+                            </h3>
+                        </div>
+                        <div style="height: 40px;" class="">
+                            <div class="badge badge-danger float-right"></div>
+                            <div style="margin-bottom: 50px;width:252px;" class="btn-group" role="group">
+                              <button style="border-color: white;background: rgb(0,0,0,0.5);" (click)="Buy(item)" class="btn btn-dark" data-toggle="modal"  data-target="#exampleModalCenter">Buy</button>
+                              <button style="border-color: white;background: rgb(0,0,0,0.5);"  class="btn btn-dark" data-toggle="modal"  (click)="Delete(item.cartid)" >Delete</button>
+                                <br>
+                                <small class="text-muted"><del></del></small>
+                            </div>
+                        </div>
+                    </div>
+                  
+                  
+                  </div> 
+                </div><!--.col-->
+            </div><!--.row-->
+        </div><!--.container-->
+    </div><!--.container-fluid-->
+</section>

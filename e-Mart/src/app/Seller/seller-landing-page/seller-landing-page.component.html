@@ -1,0 +1,78 @@
+<div style="max-width: 100%;overflow-x: hidden;overflow-y:hidden;">
+<div>
+<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#"><i class="fa fa-fu fa-home"></i>E-mart</a>
+        </div>
+        <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+            <ul class="navbar-nav flex-grow-1 smooth-scroll list-unstyled">
+                <li class="nav-item" id="home">
+                    <a style="margin-left: 90px;" class="nav-link text-light" [routerLink]="'Land'" routerLinkActive="router-link-active"  asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" [routerLink]="'Additems'" routerLinkActive="router-link-active"  routerLinkActive="router-link-active"  asp-area="" asp-controller="Home">AddItems</a>
+                </li>
+            
+            <li class="nav-item">
+              <a class="nav-link text-light" [routerLink]="'viewitems'" routerLinkActive="router-link-active"  routerLinkActive="router-link-active"  asp-area="" asp-controller="Home" >MyItems</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" [routerLink]="'#'" routerLinkActive="router-link-active"  routerLinkActive="router-link-active"  asp-area="" asp-controller="Home"></a>
+        </li>
+       
+      </ul>
+     
+        </div>
+        <li class="nav-item form-inline my-2 my-lg-0" id="search">
+            <a class="nav-link text-light" [routerLink]="'ViewProfile'" routerLinkActive="router-link-active"   routerLinkActive="router-link-active"  asp-area="" asp-controller="Home">MyProfile</a>
+        </li>
+        <li class="nav-item form-inline my-2 my-lg-0" id="logout">
+            <button (click)="reset()" routerLinkActive="router-link-active"  style="border-color:white;color: white;" class="btn btn-outline-default my-2 my-sm-0" type="submit">Logout</button>
+
+        </li>
+  
+    </div>
+  </nav>
+  
+  
+  <div style="height: 770px;" class="row">
+    <div class="col-1">
+ <div style="margin-top: -15px;height: 730px;" class="main">
+   <aside style="height: 730px;">
+     <div style="background:rgba(0,0,0,0.1)" class="sidebar left ">
+       <div class="user-panel">
+         <div class="pull-left image">
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcThRkKvUNUVqU1TE__aTer2jpxAZ4D1Q9EIBe9xAOXbnKzRkB82" class="rounded-circle" alt="User Image">
+         </div>
+         <div style="margin-top:25px;" class="pull-left info">
+           <a href="#"><i class="fa fa-circle text-success"></i></a>
+         </div>
+         <div *ngIf="list" class="pull-left info">
+           <p style="margin-left: 20px;color: white;">{{list.username}}</p>
+         </div>
+       </div>
+       <ul class="list-sidebar bg-defoult">
+         
+       
+       <li> <a [routerLink]="'/Seller/Additems'" routerLinkActive="router-link-active"  ><i class="fa fa-plus"></i> <span class="nav-label">Add Items</span></a> </li>
+       <li> <a [routerLink]="'/Seller/viewitems'" routerLinkActive="router-link-active"  ><i class="fa fa-eye"></i> <span class="nav-label">MyItems</span></a> </li>
+       
+      
+     
+       <li> <a [routerLink]="'/Seller/viewitems'" routerLinkActive="router-link-active"  ><i class="fa fa-trash"></i> <span class="nav-label">Delete Item</span></a> </li>
+     
+   <li> <a  [routerLink]="'/Seller/ViewProfile'" routerLinkActive="router-link-active"  data-toggle="collapse"  class="collapsed active" ><i class="fa fa-user"></i>My Profile</a>
+  
+ </li>
+ <li> <a [routerLink]="'/Land'" routerLinkActive="router-link-active"  ><i class="fa fa-power-off"></i> <span class="nav-label">Logout</span></a> </li>
+
+
+</ul>
+</div>
+</aside>
+</div></div>
+<div class="col-11" style="margin-bottom: 400px;">
+   <router-outlet></router-outlet></div>
+</div> 
+</div>

@@ -1,0 +1,21 @@
+<div class="container login-container">
+    <div class="row">
+        <div class="col-md-6 login-form-1">
+            <h3>Add Category</h3>
+<form [formGroup]="adminform">
+            
+               
+                <div class="form-group">
+                    <input  type="text" formControlName="categoryname" class="form-control" placeholder="Your Category name *" value="" />
+                </div>
+                <div class="form-group">
+                    <input  type="text" formControlName="categorydet" class="form-control" placeholder="Your Category details *" value="" />
+                </div>
+                <div class="form-group">
+                    <button (click)="AddC()" type="submit" class="btnSubmit btn-info" value="Login">Add</button>
+                </div>
+                
+                </form>
+            </div>
+    </div>
+</div>

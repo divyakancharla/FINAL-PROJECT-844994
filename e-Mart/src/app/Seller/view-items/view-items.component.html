@@ -1,0 +1,110 @@
+<!-- <form [formGroup]="form">
+<div class="container">
+	<div class="row">
+	<br>
+         <div>
+            <input type="number" formControlName="Sellerid">
+        </div> -->
+         <!-- <div class="col-sm-6">
+            <div class="panel panel-primary">
+              <div style="width: 550px;" class="panel-heading"></div>
+              <table class="table table-bordered">
+                <thead style="background-color: white;">
+                  <tr>
+                      
+                    <th>Item Id</th>
+                    <th>Item Name</th>
+                    <th>Item Details</th>
+                    <th>Price</th>
+                    <th>StockNumber</th>
+                    <th>Remarks</th>
+                    <th >Action</th>
+                  </tr>
+                </thead>
+               <tbody style="background: rgb(233,233,233,0.5);">
+                   <tr *ngFor="let item of list">
+                       <td>{{item.itemid}}</td>
+                       <td>{{item.itemname}}</td>
+                       <td>{{item.itemdet}}</td>
+                       <td>{{item.price}}</td>
+                       <td>{{item.stocknumber}}</td>
+                       <td>{{item.remarks}}</td>
+                       <td>{{item.cid}}</td>
+                       <td><img src='assets/images/{{item.imagename}}' style="height:150px; width:150px;"><br></td>
+                       <td><button class="btn btn-dark" data-toggle="modal"  (click)="patch(item.itemid)" data-target="#exampleModalCenter">Edit</button><button class="btn" data-toggle="modal"  (click)="Delete(item.itemid)" >Delete</button></td>
+                   </tr>
+               </tbody>
+              </table>
+            </div>
+         
+          </div>
+     </div></div>  </form>  -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div style="background-image: liner-gradient(black,white);" class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">Edit Items</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div style="background-color:rgb(0,0,0,0.5);" class="modal-body">
+                  <form [formGroup]="form">
+                    <div class="form-group" >
+                      <label style="color: black;" class="col-form-label">Item Name:</label>
+                      <input  style="color: black;" formControlName="itemnam" type="text" class="form-control" id="recipient-name">
+                    </div>
+                    <div class="form-group">
+                      <label style="color: black;" class="col-form-label">price:</label>
+                      <input  type="text" formControlName="price" class="form-control" id="recipient-name">
+                    </div>
+                    <div class="form-group">
+                      <label style="color: black;" class="col-form-label">Brief:</label>
+                      <input  type="text" formControlName="itemdet" class="form-control" id="recipient-name">
+                    </div>
+                    <div class="form-group">
+                      <label style="color: black;" class="col-form-label">Stock We Have:</label>
+                      <input  type="text" formControlName="stock" class="form-control" id="recipient-name">
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button (click)="Edititem()" type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+        </div>
+        <section class="sections random-product">
+          <div class="container-fluid">
+              <div class="container">
+                  <div  class="row">
+                      <div  *ngFor="let item of list" class="col-md-3">
+                        <div style="margin-top: 20px;">
+                          <div style="background: rgb(255,255,255,0.5);" class="card">
+                              <img style="height:200px;" class="card-img-top" src='assets/images/{{item.imagename}}' alt="Card image cap">
+                              <div style="height:10px;margin-bottom: 40px;background: rgb(255,255,255,0.5);font-family:Times New Roman, Times, serif" class="card-body">
+                                  <h5  class="card-title">
+                                      <a style="float: left;" href="#" class="text-dark">{{item.itemname}}</a>
+                                      <h3 class="fa fa-rupee" style="float: right;">{{item.price}}</h3>
+                                  </h5>
+                              </div>
+                              <div style="height: 40px;" class="">
+                                  <div class="badge badge-danger float-right"></div>
+                                  <div style="margin-bottom: 50px;width:252px;" class="btn-group" role="group">
+                                    <button style="border-color: white;background: rgb(0,0,0,0.5);" class="btn btn-dark" data-toggle="modal"  (click)="patch(item.itemid)" data-target="#exampleModalCenter">Edit</button>
+                                    <button style="border-color: white;background: rgb(0,0,0,0.5);"  class="btn btn-dark" data-toggle="modal"  (click)="Delete(item.itemid)" >Delete</button>
+                                      <br>
+                                      <small class="text-muted"><del></del></small>
+                                  </div>
+                              </div>
+                          </div>
+                        
+                        
+                        </div> 
+                      </div><!--.col-->
+                  </div><!--.row-->
+              </div><!--.container-->
+          </div><!--.container-fluid-->
+      </section>
+      

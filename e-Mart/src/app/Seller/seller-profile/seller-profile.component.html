@@ -1,0 +1,93 @@
+<form [formGroup]="Sellform" (ngSubmit)="Onsubmit()">
+    <div class="container register-form" id="form" style="float: right;margin-top:90px;margin-right:130px;">
+        <div class="form">
+            <div class="note">
+                <p>Register Here</p>
+            </div>
+            
+            <div class="form-content"  style="border-color: white;">
+                <div   class="row">
+                    
+                    <div class="col-md-6">
+                        <!-- <div class="form-group">
+                            <input type="text" formControlName="id" class="form-control" placeholder="BuyerID *" [ngClass]="{ 'is-invalid': submitted && f.id.errors }" />
+                                    <div *ngIf="submitted && f.id.errors" class="invalid-feedback">
+                                        <div *ngIf="f.id.errors.required">id is required</div>
+                                        <div *ngIf="f.id.errors.pattern">Enter valid id ex:B445</div>
+                                    </div>
+                        </div> -->
+                       
+                        <div class="form-group">
+                            <input type="text" formControlName="username" class="form-control" placeholder="Your Name *" value=""  [ngClass]="{ 'is-invalid': submitted && f.username.errors }"/>
+                            <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                                <div *ngIf="f.username.errors.required">First Name is required</div>
+                                <div *ngIf="f.username.errors.pattern">Enter only Alphabets</div>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    <div class="col-md-6">
+                        
+                        <div class="form-group">
+                            <input type="text" formControlName="companyname" class="form-control" placeholder="Your Company Name *" value="" [ngClass]="{ 'is-invalid': submitted && f.companyname.errors }" />
+                            <div *ngIf="submitted && f.companynameerrors" class="invalid-feedback">
+                                <div *ngIf="f.companyname.errors.required">First Name is required</div>
+                                <div *ngIf="f.companyname.errors.pattern">Enter only Alphabets</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="email" formControlName="email" class="form-control" placeholder="Your email *" value="" [ngClass]="{ 'is-invalid': submitted && f.email.errors }"/>
+                            <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                                <div *ngIf="f.email.errors.required">First Name is required</div>
+                                <div *ngIf="f.email.errors.pattern">Enter only Alphabets</div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="textarea" formControlName="brief" class="form-control" placeholder="Brief About Company *" value="" [ngClass]="{ 'is-invalid': submitted && f.brief.errors }"/>
+                            <div *ngIf="submitted && f.brief.errors" class="invalid-feedback">
+                                <div *ngIf="f.brief.errors.required">First Name is required</div>
+                                <div *ngIf="f.brief.errors.pattern">Enter only Alphabets</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="text" formControlName="postaladdress" class="form-control" placeholder="Your Postal Address *" value="" [ngClass]="{ 'is-invalid': submitted && f.postaladdress.errors }"/>
+                            <div *ngIf="submitted && f.postaladdress.errors" class="invalid-feedback">
+                                <div *ngIf="f.postaladdress.errors.required">First Name is required</div>
+                                <div *ngIf="f.postaladdress.errors.pattern">Enter only Alphabets</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" formControlName="website" class="form-control" placeholder="Your Website *" value="" [ngClass]="{ 'is-invalid': submitted && f.website.errors }"/>
+                            <div *ngIf="submitted && f.website.errors" class="invalid-feedback">
+                                <div *ngIf="f.website.errors.required">First Name is required</div>
+                                <div *ngIf="f.website.errors.pattern">Enter only Alphabets</div>
+                            </div>
+                        </div>
+                    </div>
+                     
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <input type="text" formControlName="mobilenumber" class="form-control" placeholder="Your Mobile Number*" value="" [ngClass]="{ 'is-invalid': submitted && f.mobilenumber.errors }"/>
+                            <div *ngIf="submitted && f.mobilenumber.errors" class="invalid-feedback">
+                                <div *ngIf="f.mobilenumber.errors.required">First Name is required</div>
+                                <div *ngIf="f.mobilenumber.errors.pattern">Enter only Alphabets</div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <button  (click)="Edit()" style="border-color: white;background: rgb(0,0,0,0.5);" class="btn btn-dark" data-toggle="modal" >Edit</button>
+
+                </div>
+             
+            </div>
+       
+        </div>
+    </div>
+    </form>
+    
